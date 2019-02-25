@@ -1,5 +1,5 @@
 import { config } from "./config";
-const mlab_url = "mongodb://"+config.dbuser+":"+config.dbpassword+"@ds259351.mlab.com:59351/"+config.dbname;
+const mlab_url = "mongodb://"+config.dbuser+":"+config.dbpassword+"@"+config.db+config.dbname;
 
 export const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;

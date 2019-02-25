@@ -1,0 +1,33 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: ./
+      dockerfile: ./docker/Dockerfile-front
+    restart: always
+    ports:
+      - "801:801"
+    volumes:
+      - "./web:/app"
+  backend:
+    build:
+       context: ./
+       dockerfile: ./docker/Dockerfile-server
+    restart: always
+    ports: 
+      - "3000:3000"
+    volumes:
+      - "./server:/app"
+    environment:
+      WAIT_HOSTS: database:27017
+  database:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=example
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=api
+    volumes:
+      - "./data/db:/data/db"
+    expose:
+      - 27017
+    command: "mongod --smallfiles --logpath=/var/log/mongodb/mongodb.log"
