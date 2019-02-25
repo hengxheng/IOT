@@ -6,20 +6,25 @@ services:
       dockerfile: ./docker/Dockerfile-front
     restart: always
     ports:
-      - "801:801"
+      - "3000:3000"
     volumes:
       - "./web:/app"
+    networks:
+      - frontend
   backend:
     build:
        context: ./
        dockerfile: ./docker/Dockerfile-server
     restart: always
     ports: 
-      - "3000:3000"
+      - "3001:3001"
     volumes:
       - "./server:/app"
     environment:
       WAIT_HOSTS: database:27017
+    networks:
+      - frontend
+      - backend
   database:
     image: mongo
     environment:
@@ -31,3 +36,5 @@ services:
     expose:
       - 27017
     command: "mongod --smallfiles --logpath=/var/log/mongodb/mongodb.log"
+    networks:
+      - backend
