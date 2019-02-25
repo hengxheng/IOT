@@ -1,58 +1,25 @@
 {
-  "name": "iot",
+  "name": "iot-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production --env.mode production",
-    "start": "webpack-dev-server --mode development --open --env.mode development",
     "server-start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^1.4.2",
-    "@material-ui/icons": "^2.0.0",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "mongodb": "^3.1.1",
-    "mongoose": "^5.2.5",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-router-dom": "^4.3.1",
-    "serialize-javascript": "^1.5.0"
+    "mongoose": "^5.2.5"
   },
   "devDependencies": {
-    "autoprefixer": "^9.0.1",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-react": "^1.0.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.5",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-register": "^6.26.0",
     "config": "^2.0.0",
-    "css-loader": "^1.0.0",
-    "cssnano": "^4.0.4",
-    "dotenv": "^6.0.0",
     "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.4.2",
-    "node-sass": "^4.9.2",
-    "nodemon": "^1.18.3",
-    "postcss-loader": "^2.1.6",
-    "sass-loader": "^7.0.3",
-    "style-loader": "^0.21.0",
-    "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5",
-    "webpack-node-externals": "^1.7.2"
+    "nodemon": "^1.18.3"
   }
 }

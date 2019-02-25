@@ -1,4 +1,4 @@
-export const config = {
+const config = {
     device_url: "localhost",
     device_port: 3001,
     dbuser: "example",
@@ -7,3 +7,5 @@ export const config = {
     dbcollection: "devices",
     db: "mongodb://mongo:27017/"
 }
+
+module.export = config;

@@ -1,6 +1,6 @@
 const express = require('express');
 const router_led = express.Router();
-import LightController from "../controller/LightController";
+const LightController = require('../controller/LightController');
 
 let Light = new LightController();
 

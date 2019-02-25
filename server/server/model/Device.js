@@ -1,5 +1,4 @@
-import { config } from "../config";
-
+const config = require('../config');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const DeviceSchema = new Schema({
@@ -9,4 +8,4 @@ const DeviceSchema = new Schema({
 
 const Device = mongoose.model(config.dbcollection,DeviceSchema);
 
-export default Device;
+module.export = Device;

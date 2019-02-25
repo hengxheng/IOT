@@ -1,7 +1,7 @@
 import Light from "../model/Device";
 import { db_connection, mongoose_connection, mongoose } from "../db_connection";
 
-export default class LightController{
+class LightController{
     constructor(){
         mongoose_connection();
     }
@@ -63,3 +63,5 @@ export default class LightController{
         });
     }
 }
+
+module.exports = new LightController();
