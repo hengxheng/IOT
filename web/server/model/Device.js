@@ -7,6 +7,6 @@ const DeviceSchema = new Schema({
     Mode: Number
 });
 
-const Device = mongoose.model(config.dbcollection,DeviceSchema);
+const Device = mongoose.model(config.dbcollection, DeviceSchema);
 
 export default Device;

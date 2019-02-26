@@ -1,5 +1,5 @@
-import Device from "../model/Device";
-import { mongoose_connection } from "../db_connection";
+const Device = require('../model/Device');
+const mongoose_connection = require('../db_connection');
 
 export default class DeviceController{  
     constructor(){

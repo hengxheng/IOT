@@ -17,8 +17,10 @@ services:
     restart: always
     ports: 
       - "3001:3001"
+    command: ['npm', 'run', 'dev']
     volumes:
-      - "./server:/app"
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
     environment:
       WAIT_HOSTS: database:27017
     networks:

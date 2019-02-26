@@ -1,8 +1,8 @@
 const express = require('express');
 const router_led = express.Router();
-const LightController = require('../controller/LightController');
+const Light = require('../controller/LightController');
 
-let Light = new LightController();
+// let Light = new LightController();
 
 router_led.use(function(req, res, next) {
     // do logging

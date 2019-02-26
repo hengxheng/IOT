@@ -1,5 +1,5 @@
-import Light from "../model/Device";
-import { db_connection, mongoose_connection, mongoose } from "../db_connection";
+const Light = require('../model/Device');
+const mongoose_connection = require('../db_connection');
 
 class LightController{
     constructor(){
