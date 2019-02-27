@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {MenuItem,Button,Menu}  from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+// import { MenuItem,Button,Menu }  from '@material-ui/core';
 import { Menu as MenuIcon } from '@material-ui/icons';
 
 

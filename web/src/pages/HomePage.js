@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeImg from "../../img/lot.png";
+import HomeImg from '../img/lot.png';
 export default class HomePage extends React.Component{
     render(){
         return (
