@@ -1,6 +1,6 @@
 const config = require('./config');
 const mongoose = require('mongoose');
-const mlab_url = "mongodb://"+config.dbuser+":"+config.dbpassword+"@"+config.db+config.dbname;
+const mlab_url = "mongodb://"+config.dbuser+":"+config.dbpassword+"@"+config.dbhost+"/"+config.dbname; //mongodb://example:password@mongo:27017/api
 console.log(mlab_url);
 mongoose.Promise = global.Promise;
 const mongoose_connection = () => {

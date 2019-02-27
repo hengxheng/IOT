@@ -26,17 +26,17 @@ services:
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules
-    environment:
-      WAIT_HOSTS: database:27017
+    links:
+      - database
     networks:
       - frontend
       - backend
   database:
     image: mongo
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=example
+      - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
-      - MONGO_INITDB_DATABASE=api
+      - MONGO_INITDB_DATABASE=device
     volumes:
       - "./data/db:/data/db"
     ports:

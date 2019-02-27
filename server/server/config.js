@@ -1,11 +1,8 @@
-const config = {
+module.exports = {
     device_url: "localhost",
     device_port: 3001,
-    dbuser: "example",
+    dbuser: "admin",
     dbpassword: "password",
-    dbname: "api",
-    dbcollection: "devices",
-    db: "mongodb://mongo:27017/"
+    dbname: "device",
+    dbhost: "database:27017"
 }
-
-module.export = config;
