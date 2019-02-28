@@ -65,15 +65,15 @@ export default class LightDIV extends React.Component{
                             { this.state.d_title }
                         </div>
                         <div className="d-block-ctrl" style={styles.light}>
-                            <Button id="l-btn1" variant="outlined" aria-label="Light" className={"primary-btn "+ (this.state.light_mode == 0 ? "" : "off")} 
+                            <Button id="l-btn1" variant="outlined" aria-label="Light" className={"primary-btn "+ (this.state.light_mode === 0 ? "" : "off")} 
                             onClick={ (e) => {this.changeLightMode(0); openSnackbar("Mode: 0");} }>
                                 <Icon>ON</Icon>
                             </Button>
-                            <Button id="l-btn2" variant="outlined" aria-label="Light" className={"primary-btn "+ (this.state.light_mode == 1 ? "" : "off")} 
+                            <Button id="l-btn2" variant="outlined" aria-label="Light" className={"primary-btn "+ (this.state.light_mode === 1 ? "" : "off")} 
                             onClick={ (e) => {this.changeLightMode(1); openSnackbar("Mode: 1");} }>
                                 <Icon>OFF</Icon>
                             </Button>
-                            <Button id="l-btn3" variant="outlined" aria-label="Light" className={"primary-btn "+ (this.state.light_mode == 2 ? "" : "off")} 
+                            <Button id="l-btn3" variant="outlined" aria-label="Light" className={"primary-btn "+ (this.state.light_mode === 2 ? "" : "off")} 
                             onClick={ (e) => {this.changeLightMode(2); openSnackbar("Mode: 2");} }>
                                 <Icon>FLASH</Icon>
                             </Button>

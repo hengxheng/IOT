@@ -32,7 +32,7 @@ services:
       - frontend
       - backend
   database:
-    image: mongo
+    image: mongo:latest
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
@@ -41,7 +41,7 @@ services:
       - "./data/db:/data/db"
     ports:
       - "27017:27017"
-    command: "mongod --smallfiles --logpath=/var/log/mongodb/mongodb.log"
+    # command: "mongod --smallfiles --logpath=/var/log/mongodb/mongodb.log"
     networks:
       - backend
 networks: 
